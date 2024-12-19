@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textContent vs innerHTML Example</title>
+</head>
+<body>
+    <h1>textContent vs innerHTML Example</h1>
+
+    <!-- Button to show differences -->
+    <button onclick="showTextContent()">Show with textContent</button>
+    <button onclick="showInnerHTML()">Show with innerHTML</button>
+
+    <!-- Display Section -->
+    <div id="output"></div>
+
+    <script>
+        // Using textContent
+        function showTextContent() {
+            const text = "<b>This text is bold</b>"; // Attempt to add HTML tags
+            document.getElementById("output").textContent = text; // Sets plain text, no HTML rendered
+        }
+
+        // Using innerHTML
+        function showInnerHTML() {
+            const html = "<b>This text is bold</b>"; // HTML tags
+            document.getElementById("output").innerHTML = html; // Renders HTML (text will be bold)
+        }
+    </script>
+</body>
+</html>
