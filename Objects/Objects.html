@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in JS</title>
+</head>
+<body>
+    <h1>Tutorial for Objects in Java Script.</h1>
+
+    <!-- Input Secton  -->
+    <input type="text" placeholder="Enter Employee Name" id="emp_name">
+    <input type="text" placeholder="Enter Employee ID" id="emp_id">
+    <input type="number" placeholder="Enter Employee Salary" id="emp_salary">
+    <button onclick="Employee()">Submit</button>
+
+    <!-- Display Section  -->
+    <p>The Company Name is <span id="office_name"></span> & the location is <span id="office_location"></span></p>
+    <p>The Employee Name is <span id="empl_name"></span> & the Employee ID is <span  id="empl_id"></span> his salary is <span id="empl_sal"></span>.</p>
+
+    <script>
+
+        const office = {
+            name: "Shoora Technology", 
+            location: "Gurgaon"
+        };  //Add Properties when assign.
+
+        // Display Office Property 
+        document.getElementById("office_name").innerHTML = office.name;
+        document.getElementById("office_location").innerHTML = office.location;
+
+        function Employee(){
+            const employee = { //Add Object Properties from user.
+                name: document.getElementById("emp_name").value,
+                id: document.getElementById("emp_id").value,
+                salary: document.getElementById("emp_salary").value
+            };
+
+            //Display Employee Details
+            document.getElementById("empl_name").innerHTML = employee.name; //textContent: textContent is designed specifically for setting text in an element, so it works well when you just need to show plain text without interpreting any HTML tags.
+            document.getElementById("empl_id").innerHTML = employee.id;
+            document.getElementById("empl_sal").innerHTML = employee.salary;
+        }
+    </script>
+</body>
+</html>
