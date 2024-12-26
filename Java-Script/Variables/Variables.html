@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables in JS</title>
+</head>
+<body>
+    <h1>
+        Tutorial Of Variables in JS
+    </h1>
+    <p>
+        Check Console for Results.
+    </p>
+    <script>
+
+        //Let Variable
+        //Global Scope
+        let x = 10;
+        let a ="abc";
+        
+        //Let can't be Redeclared 
+        //let x = 6;
+        {
+            // Black Scope
+            let x = 5;
+            console.log("Let Keyword Block Eg." + x);
+        }
+        console.log( "Let Keyword Eg."+ x + ", " + a);
+
+        //var Variable
+        //Global Scope
+        var b = 12;
+        var c = "Hello!";
+
+        // var can be Redeclared
+        var b = 13;
+
+        {
+            //Bloack Scope
+            var b = 14;
+            var b = 15;
+            console.log("Var keyword Block Eg." + b);
+        }
+        console.log( "Var Keyword Eg."+ b + ", " + c);
+
+
+        //Const Variable
+        //Global Scope
+        const d = 10;
+        const e = "Const";
+
+        //Const can not be Redeclared
+        // const d = 11;
+        {
+            //Block Scope
+            const d = 20;
+            console.log("Const keyword Block Eg." + d);
+        }
+        console.log( "Const Keyword Eg."+ x + ", " + a);
+    </script>
+</body>
+</html>

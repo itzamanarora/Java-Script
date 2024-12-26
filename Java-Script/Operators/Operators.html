@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators in JS</title>
+</head>
+<body>
+    <h1>
+        Tutorial Of Operators in JS
+    </h1>
+    <script>
+        //Arthmetic Operators -- Used to Operator that operate upon the numerical values and return Numberical values.
+
+        let a = 10;
+        let b = 20;
+        let c;
+
+        c = a + b; //variables is Operants and + is Operators
+        console.log("Arthmetic Operator: " + c);
+        c = a * b;
+        console.log("Arthmetic Operator: " + c);
+        c = a / b;
+        console.log("Arthmetic Operator: " + c);
+        c = a - b;
+        console.log("Arthmetic Operator: " + c);
+        c = a % b;
+        console.log("Arthmetic Operator: " + c);
+    </script>
+
+    <script>
+        // Assignment Operators -- Used to asign Values to Variable in JS
+
+        let d = 30;
+        let e = 20;
+
+        a += b; 
+        console.log("Assignment Operator: " + a);
+
+        a *= b;
+        console.log("Assignment Operator: " + a);
+
+        a /= b;
+        console.log("Assignment Operator: " + a);
+
+        a -= b;
+        console.log("Assignment Operator: " + a);
+
+        a %= b;
+        console.log("Assignment Operator: " + a);
+
+    </script>
+
+    <script>
+        // Comparsion Operators -- Used to Compare or check conditions and making decisions in JS
+
+        let f = 50;
+        let g = 60;
+ 
+        console.log("Comparsion Operator: " + f == g); //Campare the equality of two operands.
+        console.log("Comparsion Operator: " + f != g); //Compare the Inequality of two operands.
+        console.log("Comparsion Operator: " + f >= g); //Check the left side operands is greater than or equal to the right side operands.
+        console.log("Comparsion Operator: " + f > g); //Check the left side operands is greater than to the right side operands.
+        console.log("Comparsion Operator: " + f <= g); //Check the left side operands is smaller than or equal to the right side operands.
+        console.log("Comparsion Operator: " + f < g); //Check the left side operands is smaller than to the right side operands.
+        console.log("Comparsion Operator: " + f === g); //Compare the equality of two operands and their types.
+        console.log("Comparsion Operator: " + f !== g); //Compare the Inequality of two operands and their types.
+
+    </script>
+
+    <script>
+        // Logical Operators -- Used to perform Logical Operations on values and return either true or fasle in JS. Commoly used in If-Else, and Loops.
+
+        //Both Condition should be true.
+    if(a == b && c == d) {
+        
+            console.log("Logical Operators: If")
+
+    } else if(a != b || a != b){  //One should be true.
+
+            console.log("Logical Operators: Else If")
+    }
+    else {
+            console.log("Logical Operatiors: Else Statement!")
+    }
+
+    </script>
+
+    <script>
+        // Ternary Operators -- The Ternary Operator in JS is a Shortcut for writing simple If-else
+
+        let Marks = 50;
+
+        let Results = (Marks > 40 ) ? "Pass" : "False" ;
+        console.log("Ternary Operators: "  + Results);
+
+    </script>
+
+    <script>
+        //Comma Operator -- This Comma Operator mainly evalutues its operands from left to right sequentially and returns the value of the rightmost operand.
+        function fun1() {
+            console.log('Comma Operator: one');
+            return;
+        }
+
+        function fun2() {
+            console.log('Comma Operator: two');
+            return;
+        }
+        function fun3() {
+            console.log('Comma Operator: three');
+            return;
+        }
+
+        let x = (fun1(),fun2(),fun3());
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+</head>
+<body>
+    <h1>This Tutorial Shows the working of Switch Cases.</h1>
+    <input type="number" placeholder="Enter 1 Number Between 1-3" id="num">
+    <button onclick="switchcase()">Submit</button>
+    <div id="Results"></div>
+
+    <script>
+
+        //Switch Case in FUnction
+        function switchcase(){
+
+            // .value means getting the value from the input 
+            // parseInt means typecasting into Int 
+            const number = parseInt(document.getElementById("num").value);
+            switch (number) {
+                case 1:
+                    document.getElementById("Results").innerHTML  = "You are in 1st Switch Case."
+                    break;
+                case 2:
+                    document.getElementById("Results").innerHTML = "You are in 2nd Switch Case."
+                    break;
+                case 3: 
+                    document.getElementById("Results").innerHTML = "You are in 3rd Switch Case."
+                    break;
+                default:
+                    document.getElementById("Results").innerHTML = "Error!"
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
