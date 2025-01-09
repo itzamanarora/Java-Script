@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Filter methods</title>
+</head>
+<body>
+    <h1>Some More Array methods : Filter</h1>
+    <p>The filer() methdo creates a new array filled with elements that pass a test provided by a function.</p>
+    <p>The filer() method does not execute the function for empty elements.</p>
+    <p>The filer() method does not changes the org Array.</p>
+    <br>
+<!-- jo condition true hogi usko new array mein store kar lega jo nhi hogi usko nhi krega. -->
+
+    <script>
+// Purpose: Filters the array based on a condition and creates a new array with elements that pass the condition.
+// Does it return a new array? Yes.
+// Use case: When you want a subset of the original array.
+        const number = [1,2,3,4,5,6,7,8,9,10];
+
+        const even  = number.filter(num =>
+            num % 2 === 0
+        );
+
+        document.write(even);
+        console.log(even);
+    </script>
+</body>
+</html>

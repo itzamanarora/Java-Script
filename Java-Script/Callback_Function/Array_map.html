@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Some More Array methods : MAP</h1>
+    <p>Create a new array with the results of some operations. The value its callback returns are used to form new array.</p>
+    <br>
+    <p>arr.map(callbackFnx( value, index, array))</p>
+
+    <script>
+
+// Purpose: Transforms each element of an array and creates a new array based on the results.
+// Does it return a new array? Yes.
+// Use case: When you want to apply a function to every element and return a new array.
+        const nums = [12,132,34,35,65,43]
+
+        const doubled = nums.map(values => nums*2);
+        document.write(doubled);
+    </script>
+</body>
+</html>

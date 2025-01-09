@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array_Reduce</title>
+</head>
+<body>
+    <h1>Some More Array methods: Reduce</h1>
+    <p> Perform some operations and reduces the array to a single value. It returns the single value</p>
+    <br>
+    <script>
+        const arr = [1,2,3,4,5,6,7,8,9,10];
+
+        const count = arr.reduce((result, current) => {
+            return result + current;
+        })
+
+        document.write(count);
+    </script>
+    <script>
+        const arr2 = [32,42,43,123,34,123,5,5423,53123,5324,334,342,5465,4423,5423,2343]
+
+        const result = arr2.reduce((prev, current) => {
+            return prev > current ? prev : current 
+        })
+
+        document.write(result)
+    </script>
+</body>
+</html>

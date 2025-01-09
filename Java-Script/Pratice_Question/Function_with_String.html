@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratical 2</title>
+</head>
+<body>
+    <h1>
+        <center>
+            Pratical 2
+        </center>
+    </h1>
+    <p>
+        WAP using the "function" keyword that takes a String as an arguments and returns the number of Vowels in String.
+    </p>
+    <input type="text" placeholder="Enter any Words." id="field">
+    <button onclick="countVowels()">Count!</button>
+    <div id="result"></div>
+    <script>
+
+        function countVowels() {
+            let count = 0;
+            let value = document.getElementById("field").value;
+
+            for(const char of value){ //to get the character from the String.
+                if(char === "a" || char ==="e" || char === "i" || char === "o" || char === "u") {
+                    count++;
+                }
+            }
+            document.getElementById("result").innerText = count;
+        }
+
+    </script>
+</body>
+</html>

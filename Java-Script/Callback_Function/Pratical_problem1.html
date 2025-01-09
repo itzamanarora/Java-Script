@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 1</title>
+</head>
+<body>
+    <h1>
+        <Center>
+            Pratical Problem 1
+        </Center>
+    </h1>
+    <p>Qs. We are given array of marks of students. Filter out of the marks of students that scored 90+ marks.</p>
+    <div>List of Students who scored 90+marks: <span id="result"></span></div>
+    <script>
+        const marks = [56,75,79,98,78,98,96,95,67,87,56,99,27,92]
+
+        const result = marks.filter( val =>
+        val > 90
+        );
+        document.getElementById("result").innerText = result;
+    </script>
+</body>
+</html>

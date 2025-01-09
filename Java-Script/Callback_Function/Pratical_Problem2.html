@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 2</title>
+</head>
+<body>
+    <h1>
+        <Center>
+            Pratical Problem 2
+        </Center>
+    </h1>
+    <p>Qs. Take a Number n as a input from user. Create an array of numbers from 1 to n. <br> Use the reduce methods to calculate the sum of all numbers in the array. <br> Use the reduce method to calculate product of all numbers in the array.</p>
+    <input type="number" placeholder="Enter any Number" id="number">
+    <button onclick="myfunction()">Submit!</button>
+    <div>Sum of all the numbers in the Array: <span id="result1"></span></div>
+    <div>Product of all numbers in the Array: <span id="result2"></span></div>
+    <script>
+     function myfunction() {
+        const number = document.getElementById("number").value;
+        let arr = []
+        for(let i = 1 ; i <= number ; i++){
+            arr[i-1] =  i;
+        }
+
+        const result1 = arr.reduce((prev, curr) => {
+            return prev + curr;
+        })
+        document.getElementById("result1").innerText = result1;
+
+        const result2 = arr.reduce((prev, curr) => {
+            return prev * curr;
+        })
+        document.getElementById("result2").innerText = result2;
+     }
+    </script>
+</body>
+</html>
