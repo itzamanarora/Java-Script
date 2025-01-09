@@ -1,0 +1,6 @@
+1. Window Object: The window Object represent open window in browser. It is browser's oject(Not javaScript) & is automatically created by browser.
+    => It is a global object with lots of properties & methods.
+
+
+2. DOM (Document Object Model) 
+    => When a web page is loaded, the browser creates a Document Object Model(DOM) of the page.

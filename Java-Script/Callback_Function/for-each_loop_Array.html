@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Each Loop For ARRAY's</title>
+</head>
+<body>
+    <script>
+// Purpose: Executes a provided function for each array element. Unlike map(), it doesn’t return a new array.
+// Does it return a new array? No.
+// Use case: When you want to perform side effects like logging or updating a global variable.
+        let arr = ['PUNE', 'DELHI', 'MUMBAI', 'CHANDIGARH']
+
+        arr.forEach((val, idx, arr) => {  //Callback Funtion - A callback is a passed function as an arguments to another function
+            console.log(val.toLocaleLowerCase(), idx, arr)
+        })
+    </script>
+</body>
+</html>
