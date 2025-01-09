@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Properties</title>
+</head>
+<body>
+    <h1>DOM Properties: tagName, innerText, innerHTML, and textContent</h1>
+    <div><strong>tagName:</strong> return tag for element nodes<span id="id_1"></span></div>
+    <div><strong>innerText:</strong> returns the text content of the element and all its children<span id="id_2"></span></div>
+    <div><strong>innerHTML:</strong> returns the plain text or HTML contents in the elements.<span id="id_3"></span></div>
+    <div><strong>textContent:</strong>returns textual content even for hidden elements.<span id="id_4"></span></div>
+    <div id="test"></div>
+    <div class="test2" style="visibility: hidden;">This is For testing!</div>
+    <script>
+        document.getElementById("test").innerHTML = "<h1>Hello!</h1>"
+        document.getElementById("test2").textContent = "heading";
+    </script>
+</body>
+</html>
