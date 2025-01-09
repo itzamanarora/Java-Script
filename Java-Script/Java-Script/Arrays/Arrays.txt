@@ -1,0 +1,21 @@
+ JavaScript Array Methods list
+
+--------JavaScript Array Methods-----------
+
+JavaScript Array length  -- returns the length of the given array.
+JavaScript Array toString() Method -- converts the given value into the string
+JavaScript Array join() Method -- creates and returns a new string by concatenating all elements of an array. It uses a specified separator between each element in the resulting string.
+JavaScript Array delete Operator
+JavaScript Array concat() Method -- used to concatenate two or more arrays and it gives the merged array.
+JavaScript Array flat() Method -- used to flatten the array i.e. it merges all the given array and reduces all the nesting present in it.
+Javascript Array.push() Method -- used to add an element at the end of an Array
+Javascript Array.unshift() Method -- used to add elements to the front of an Array.
+JavaScript Array.pop() Method -- used to remove elements from the end of an array. 
+JavaScript Array.shift() Method -- used to remove elements from the beginning of an array 
+JavaScript Array.splice() Method -- used to Insert and Remove elements in between the Array.
+JavaScript Array.slice() Method -- returns a new array containing a portion of the original array, based on the start and end index provided as arguments
+JavaScript Array some() Method -- check weather at least one of the elements of the array satisfies the condition checked by the argument function.
+JavaScript Array reduce() Method -- used to reduce the array to a single value and executes a provided function for each value of the array (from left to right) and the return value of the function is stored in an accumulator.
+JavaScript Array map() Method -- creates an array by calling a specific function on each element present in the parent array. It is a non-mutating method. This method iterates over an array and calls the function on every element of an array.
+Javascript Array reverse() method -- used to reverse the order of elements in an array. It modifies the array in place and returns a reference to the same array with the reversed order.
+Javascript Array values() method -- returns a new Array Iterator object that contains the values for each index in the array.

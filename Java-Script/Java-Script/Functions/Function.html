@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TUTORIAL</title>
+    <script src="Script.js"></script>
+</head>
+<body>
+    <button onclick="button()">Click Me!</button>
+    <h1 id="Text">Hello World!</h1>
+    <script>
+        let text
+        console.log("Hello World!");  //To Print on Console.
+        document.write(text);  //To Write on the HTML page.
+
+        //Function which can change the text when clicked!
+        // Function with no return type 
+        function button() {
+            document.getElementById("Text").innerHTML = "Para Changed";
+        }
+
+    </script>
+
+    <script>
+        myfunction("React JS.") //Arguments
+
+        //Function with Parameters.
+        function myfunction(msg){
+            console.log(msg)
+            document.write(msg)
+        }
+    </script>
+
+    <script>
+        // Function with return
+        function sum(a, b){
+            return a+b;
+            console.log(as);
+        }
+
+        let s = sum(23,23)
+        document.write(s)
+    </script>
+</body>
+</html>
