@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query_Selector</title>
+</head>
+<body>
+    <h1>
+        Query Selector
+    </h1>
+
+    <p></p>
+    <div id="heading-id"></div>
+    <div class="container"></div>
+    <div class="container"></div>
+    <script>
+        document.querySelector("#heading-id").innerText = "HEY.";
+        document.querySelector(".container").innerText = "Yoo";
+        document.querySelector("p").innerText = "We have a method in document called query selector. we have pass the ID, Class, or Tag name in it. It will detect by itself.";
+    </script>
+</body>
+</html>
