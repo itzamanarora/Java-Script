@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM ID</title>
+</head>
+<body>
+    <h1>Tutorial of DOM: ID</h1>
+
+    <h1 id="heading">Hey </h1>
+    <div class="container"></div>
+    <div class="container"></div>
+    <div class="container"></div>
+    <div class="container"></div>
+    <script>
+        var element =  document.getElementById("heading");
+        element.style.backgroundColor = "blue";
+
+        
+        var element = document.getElementsByClassName("container"); //get element by class returns a HTML collection, which is like an array of elements,
+        for (var i = 0 ; i < 10 ; i++) {
+            element[i].innerText = "hey" ;   //add value in loop because element by class return collection.
+        }
+ 
+        // Retrieves a live collection of all <body> elements in the document.
+        // Even if there’s only one <body> element, it still returns a collection.
+    </script>
+</body>
+</html>
