@@ -7,6 +7,9 @@
 
     <!-- Styling  -->
     <style>
+      body {
+        background-color: antiquewhite;
+      }
       .container {
         display: grid;
         width: 30rem;
@@ -50,10 +53,16 @@
         <button id="btn_8"></button>
         <button id="btn_9"></button>
       </div>
+
+
       <script>
+
         const players = ['O', 'X']
+
         let currentplayer = players[0]
-        document.getElementById("Chance").innerText = chance;
+
+        document.getElementById("Chance").innerText = players[0];
+
       </script>
     </center>
   </body>

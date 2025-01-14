@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events in JS</title>
+  </head>
+  <style>
+    .container {
+        background-color: antiquewhite;
+        border: 2px solid black;
+        height: 10rem;
+        width: 10rem;
+
+    }
+  </style>
+  <body onmouseover="console.log('mouse is in body!')">
+    <h1>
+      <center>
+        Events in JS
+      </center>
+    </h1>
+    <p>
+        The change in the state of an object is known as Events
+    </p>
+    <p>
+        Events are fired to notify code of "intresting changes" that may affect code execution.
+    </p>
+    <ul>
+        <li>Mouse Events(click, double click, etc.)</li>
+        <li>Keyboard Events(keypress, keyup, and keydown)</li>
+        <li>Form Events(submit etc)</li>
+        <li>Print event & many more.</li>
+    </ul>
+
+    <!-- Inline Java Script  -->
+    <button onclick="console.log('Button was clicked!'); alert('hello!')" >Click Me!</button> <!-- onclick event -->
+    <button ondblclick="console.log('Button was clicked 2x Times.')">Click Me 2x times</button>
+    <div class="container" onmouseover="console.log('heyy!!')">This is a Conatiner</div>
+
+    <button id="button1">Submit!</button>
+    <script>
+        let button1 = document.querySelector("#button1");
+        button1.onclick = () => {
+            console.log("im in function!");
+        }
+    </script>
+  </body>
+</html>
