@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratice Problem 1</title>
+</head>
+<body>
+    <h1>
+        <center>
+            Pratice Problem 1
+        </center>
+    </h1>
+    <p><strong>Qs.</strong> Create a new button element. Give it a text "click me", background color of red & text color of white.</br> Insert the button as the first element inside the body tag.</p>
+    <div></div>
+    <script>
+        let btn = document.createElement("button");
+        btn.style.backgroundColor = "red";
+        btn.style.color = "white";
+        btn.innerText = "Click Me!";
+        btn.style.width = "10rem";
+        btn.style.height = "2rem";
+
+        let div = document.querySelector("div");
+        div.style.width = "10rem";
+        div.style.height = "10rem";
+        div.style.backgroundColor = "limegreen";
+
+        document.querySelector("body").before(btn);
+    </script>
+</body>
+</html>

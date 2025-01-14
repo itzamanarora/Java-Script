@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Insert Element</title>
+    <style>
+        .box { 
+            width: 10rem;
+            height: 10rem;
+            background-color: antiquewhite;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- To create a New Element their is a 2 Step process. -->
+    <!-- 1. Create an Element  -->
+    <!-- 2. Add an Element -->
+    <h1>
+        This is a Tutorial of DOM Insert Element!
+    </h1>
+    <p>node.append(element): Adds at the end of node(inside)</p>
+    <p>node.prepend(element): Adds at the start of node(inside)</p>
+    <p>node.before(element): Adds before the node(inside)</p>
+    <p>node.after(element): Adds after the node(inside)</p>
+    <div class="box">
+        <ul>
+            <li>Item1</li>
+            <li>Item2</li>
+            <li>Item3</li>
+            <li>Item4</li>
+        </ul>
+    </div>
+    <span></span>
+    <h2>Hello!</h2>
+     <script>
+        let newBN = document.createElement("button"); //Create a New button Element 
+        newBN.innerText = "Submit!";    //Add text to a Button
+        newBN.style.width = "7rem";     //Add Width to the Button
+        newBN.style.height = "2rem";    //Add height to the Button
+        newBN.style.backgroundColor = "Yellow"  //Add backgroundColor to the Button
+
+        let div = document.querySelector("div");    //Assign a div to this Data Type
+        div.append(newBN);        //Add a button into the div conatiner 
+
+        let heading = document.createElement("h1"); //create a h1 heading
+        heading.innerText = "This is a Heading."; //add a InnerTEXT into a heading
+
+        document.querySelector("span").after(heading); // Select the Attribute and add the heading after span
+     </script>
+     <script>
+        // to delete a Element
+        document.querySelector("h2").remove(); //This will remove the heading.
+     </script>
+</body>
+</html>
