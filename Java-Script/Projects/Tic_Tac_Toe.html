@@ -11,14 +11,19 @@
         background-color: antiquewhite;
       }
       .container {
+        height: auto;
+        margin-top: 5rem;
         display: grid;
         width: 30rem;
         grid-template-columns: auto auto auto;
+        gap: 1rem;
       }
-      button {
+      .box {
         height: 10rem;
         width: 10rem;
         font-size: 5rem;
+        border: none;
+        box-shadow: 2px 2px 10px black;
       }
 
       button:hover {
@@ -43,26 +48,22 @@
       </div>
 
       <div class="container">
-        <button id="btn_1"></button>
-        <button id="btn_2"></button>
-        <button id="btn_3"></button>
-        <button id="btn_4"></button>
-        <button id="btn_5"></button>
-        <button id="btn_6"></button>
-        <button id="btn_7"></button>
-        <button id="btn_8"></button>
-        <button id="btn_9"></button>
+        <button id="btn_1" class="box"></button>
+        <button id="btn_2" class="box"></button>
+        <button id="btn_3" class="box"></button>
+        <button id="btn_4" class="box"></button>
+        <button id="btn_5" class="box"></button>
+        <button id="btn_6" class="box"></button>
+        <button id="btn_7" class="box"></button>
+        <button id="btn_8" class="box"></button>
+        <button id="btn_9" class="box"></button>
       </div>
-
+      <button id="reset">Reset!</button>
 
       <script>
 
-        const players = ['O', 'X']
-
-        let currentplayer = players[0]
-
-        document.getElementById("Chance").innerText = players[0];
-
+       let box = document.querySelector('.box');
+       let reset = document.querySelector('#reset')
       </script>
     </center>
   </body>
