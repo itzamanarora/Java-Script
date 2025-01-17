@@ -4,38 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe Game</title>
-
-    <!-- Styling  -->
-    <style>
-      body {
-        background-color: antiquewhite;
-      }
-      .container {
-        height: auto;
-        margin-top: 5rem;
-        display: grid;
-        width: 30rem;
-        grid-template-columns: auto auto auto;
-        gap: 1rem;
-      }
-      .box {
-        height: 10rem;
-        width: 10rem;
-        font-size: 5rem;
-        border: none;
-        box-shadow: 2px 2px 10px black;
-      }
-
-      button:hover {
-        background-color: aqua;
-        border: none;
-      }
-
-      .text {
-        font-size: 1.3rem;
-      }
-    </style>
-    <!-- Styling End  -->
+    <link rel="stylesheet" href="Style.css">
   </head>
   <body>
     <!-- Body  -->
@@ -44,7 +13,10 @@
 
       <div class="text">
         Player Chance:
-        <span id="Chance"></span>
+        <span id="Player_Chance"></span>
+        <p>
+          Score: X = <span id="XScore"></span>, O = <span id="OScore"></span>
+        </p>
       </div>
 
       <div class="container">
@@ -58,13 +30,10 @@
         <button id="btn_8" class="box"></button>
         <button id="btn_9" class="box"></button>
       </div>
-      <button id="reset">Reset!</button>
-
-      <script>
-
-       let box = document.querySelector('.box');
-       let reset = document.querySelector('#reset')
-      </script>
+      <div class="winner_text"></div>
+      <button id="new_game" class="btns">New Game</button>
+      <button id="reset_game" class="btns">Reset Game</button>
     </center>
+    <script src="Script.js"></script>
   </body>
 </html>
