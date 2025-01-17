@@ -6,7 +6,11 @@ let winner_text = document.querySelector(".winner_text"); //Print the Winner Tex
 let X_Score = 0; //Default Score Value
 let O_Score = 0; //Default Score Value
 let click_count = 0;
-
+let X_prob = document.querySelector("#X_prob");
+let O_prob = document.querySelector("#O_prob");
+X_prob.value = 50;
+O_prob.value = 50;
+let Current_Player;
 
 document.querySelector("#Player_Chance").innerText = "O"; //Print the Player Chance
 document.querySelector("#XScore").innerText = X_Score; //Print the Score
@@ -24,27 +28,26 @@ const Winning_Pattern = [
   [2, 4, 6],
 ];
 
-
 //ADD VALUE in box function
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
     console.log("Box is Clicked!");
     if (chance === true) {
       //Player chance condition
-      box.innerText = "O"; //Print the Player Chance
+      Current_Player = box.innerText = "O"; //Print the Player Chance
       document.querySelector("#Player_Chance").innerText = "X"; //Change the Player Text
       chance = false; //Chance the Player Chance
     } else {
-      box.innerText = "X"; //Print the Player Chance
+      Current_Player = box.innerText = "X"; //Print the Player Chance
       document.querySelector("#Player_Chance").innerText = "O"; //Change the Player Text
       chance = true; //Chance the Player Chance
     }
     box.disabled = true; //Disable button after a player chance for missclicking
     click_count++;
+    wining_Probality(Current_Player);
     check_winner();
   });
 });
-
 
 //CHECK WINNER function
 const check_winner = () => {
@@ -63,12 +66,13 @@ const check_winner = () => {
         return;
       }
     }
-    if(click_count === 9 && winner_text.innerText === '') {
-        winner_text.innerText = `It's a DRAW!`;
+    if (click_count === 9 && winner_text.innerText === "") {
+      winner_text.innerText = `It's a DRAW!`;
+      X_prob.value = 0;
+      O_prob.value = 0;
     }
   }
 };
-
 
 //SHOW WINNER function
 const show_winner = (pos_1_Val) => {
@@ -83,7 +87,6 @@ const show_winner = (pos_1_Val) => {
   disable_box(); //Disable box function
 };
 
-
 //DISABLE BOX function
 const disable_box = () => {
   for (let box of boxes) {
@@ -97,6 +100,8 @@ const new_game = () => {
     box.disabled = false; //Box Disable off
     box.innerText = ""; //Box text clear
     winner_text.innerText = ""; //Winner Text Clear
+    X_prob.value = 50;
+    O_prob.value = 50;
 
     for (let Pattern of Winning_Pattern) {
       boxes[Pattern[0]].classList.remove("winner");
@@ -116,6 +121,8 @@ const reset_game = () => {
     X_Score = 0; //Reset Score
     document.querySelector("#OScore").innerText = O_Score; //Print the Score
     document.querySelector("#XScore").innerText = X_Score; //Print the Score
+    X_prob.value = 50;
+    O_prob.value = 50;
     for (let Pattern of Winning_Pattern) {
       boxes[Pattern[0]].classList.remove("winner");
       boxes[Pattern[1]].classList.remove("winner");
@@ -123,6 +130,29 @@ const reset_game = () => {
     }
   }
   click_count = 0; // Reset click counter
+};
+
+const wining_Probality = (Player) => {
+  const prob_value = 12.5;
+  let currentProb = Player === "X" ? parseFloat(X_prob.value) : parseFloat(O_prob.value);
+  for (let Pattern of Winning_Pattern) {
+    let pos_1_Val = boxes[Pattern[0]].innerText;
+    let pos_2_Val = boxes[Pattern[1]].innerText;
+    let pos_3_Val = boxes[Pattern[2]].innerText;
+
+    if(pos_1_Val === Player || pos_2_Val === Player || pos_3_Val === Player) {
+        currentProb += prob_value;
+    }
+
+    //Condition for handle the Wining probality if it goes more than 100.
+    if(Player === 'X') {
+        X_prob.value = currentProb > 100 ? 100 : currentProb;
+        O_prob.value = 100 - X_prob.value; //Minus X player prediction from player O prediction
+    } else {
+        O_prob.value = currentProb > 100 ? 100 : currentProb;
+        X_prob.value = 100 - O_prob.value;
+    }
+  }
 };
 
 //CLICKING EVENTs
