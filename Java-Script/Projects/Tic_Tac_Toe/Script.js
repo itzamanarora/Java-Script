@@ -79,9 +79,11 @@ const show_winner = (pos_1_Val) => {
   winner_text.innerText = `${pos_1_Val} is the Winner!`; //Print the Winner Text
   if (pos_1_Val == "O") {
     O_Score++; //Add the Score value
+    O_prob.value = 100;
     document.querySelector("#OScore").innerText = O_Score; //Print the Score
   } else {
     ++X_Score; //Add the Score Value
+    X_prob.value = 100;
     document.querySelector("#XScore").innerText = X_Score; //Print the Score
   }
   disable_box(); //Disable box function
@@ -102,7 +104,6 @@ const new_game = () => {
     winner_text.innerText = ""; //Winner Text Clear
     X_prob.value = 50;
     O_prob.value = 50;
-
     for (let Pattern of Winning_Pattern) {
       boxes[Pattern[0]].classList.remove("winner");
       boxes[Pattern[1]].classList.remove("winner");
@@ -117,12 +118,10 @@ const reset_game = () => {
     box.disabled = false; //Box Disable off
     box.innerText = ""; //Box text clear
     winner_text.innerText = ""; //Winner text clear
-    O_Score = 0; //Reset Score
-    X_Score = 0; //Reset Score
+    O_Score = 50; //Reset Score
+    X_Score = 50; //Reset Score
     document.querySelector("#OScore").innerText = O_Score; //Print the Score
     document.querySelector("#XScore").innerText = X_Score; //Print the Score
-    X_prob.value = 50;
-    O_prob.value = 50;
     for (let Pattern of Winning_Pattern) {
       boxes[Pattern[0]].classList.remove("winner");
       boxes[Pattern[1]].classList.remove("winner");
@@ -144,10 +143,9 @@ const wining_Probality = (Player) => {
         currentProb += prob_value;
     }
 
-    //Condition for handle the Wining probality if it goes more than 100.
     if(Player === 'X') {
         X_prob.value = currentProb > 100 ? 100 : currentProb;
-        O_prob.value = 100 - X_prob.value; //Minus X player prediction from player O prediction
+        O_prob.value = 100 - X_prob.value;
     } else {
         O_prob.value = currentProb > 100 ? 100 : currentProb;
         X_prob.value = 100 - O_prob.value;
