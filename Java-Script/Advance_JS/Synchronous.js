@@ -40,7 +40,7 @@ function getData(dataId, getNextdata) {
     }, 2000);
 }
 
-//this is called Callback hell
+//this is called Callback hell 
 console.log('getting data 1...');
 getData(1, () => {
     console.log('getting data 2...');
