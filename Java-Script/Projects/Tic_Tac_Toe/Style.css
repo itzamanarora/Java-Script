@@ -1,0 +1,53 @@
+body {
+    background-color: antiquewhite;
+  }
+  .container {
+    height: auto;
+    margin-top: 5rem;
+    display: grid;
+    width: 30rem;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+  }
+  .box {
+    height: 10rem;
+    width: 10rem;
+    font-size: 5rem;
+    border: none;
+    box-shadow: 2px 2px 10px black;
+    background-color: bisque;
+    color: black;
+  }
+
+  .winner {
+    color: red;
+    font-weight: bold;
+  }
+
+  .box:hover {
+    background-color: burlywood;
+    border: none;
+  }
+
+  .text {
+    font-size: 1.3rem;
+  }
+
+  .btns {
+    width: 10rem;
+    height: 3rem;
+    background-color: brown;
+    color: antiquewhite;
+    font-size: larger;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    border: none;
+  }
+  .btns:hover {
+    background-color: darkred;
+  }
+  .winner_text {
+    margin-top: 2rem;
+    font-size: larger;
+    color: green;
+  }

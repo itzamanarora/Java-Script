@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Listener</title>
+</head>
+<body>
+    <h1>
+        <center>Event Listener</center>
+    </h1>
+    <p>
+        node.addEventListener(event, callback);
+        node.removeEventListener(event, callback);
+    </p>
+    <button id="btn1">
+        Submit!
+    </button>
+    <script>
+        let btn1 = document.querySelector('#btn1');
+        btn1.addEventListener('click', (env) => { //accessing the object in the event listener
+            console.log('button 1 was clicked');
+            console.log(env); //print the object 
+            console.log(env.type); // print the event type
+        })
+
+        // To remove a listener we have to store a listener in a variable. 
+        btn1.addEventListener('click', () => {
+            console.log('button 2 was clicked -- handler'); //event listener mein hum sab event par mutiple kaam krva skte hai!
+        })
+        btn1.addEventListener('click', () => {
+            console.log('button 3 was clicked -- handler'); //event listener mein hum sab event par mutiple kaam krva skte hai!
+        })
+        btn1.addEventListener('click', () => {
+            console.log('button 4 was clicked -- handler'); //event listener mein hum sab event par mutiple kaam krva skte hai!
+        })
+        btn1.addEventListener('click', () => {
+            console.log('button 5 was clicked -- handler'); //event listener mein hum sab event par mutiple kaam krva skte hai!
+        })
+
+        const handler3 = () => { //assign a function 
+            console.log('button 6 was clicked -- handler'); //event listener mein hum sab event par mutiple kaam krva skte hai!
+        }
+
+        btn1.addEventListener('click', handler3); 
+        btn1.removeEventListener('click', handler3);
+    </script>
+</body>
+</html>

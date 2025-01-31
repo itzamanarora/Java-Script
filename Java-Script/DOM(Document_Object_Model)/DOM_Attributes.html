@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Attributes</title>
+</head>
+<body>
+    <h1>
+        This tutorial contain DOM Atrributes!
+    </h1>
+    <div id="box" name="JSDIV">This is Div</div> <!-- Select this div -->
+    <p class="para"></p>
+
+    <script>
+
+        let div = document.querySelector("div"); //choose the div
+
+        let id = div.getAttribute("id");    //now, choose the div attribute
+        console.log(id);
+        
+        let name = div.getAttribute("name"); //now, choose the another div attribue
+        console.log(name);
+    </script>
+
+    <script>
+        let para = document.querySelector("p"); //choose the paragraph
+
+        let class1 = para.getAttribute("class");    // now, choose the attribute in paragraph.
+        console.log(class1);
+    </script>
+
+    <script>
+        let para2 = document.querySelector("p");
+
+        console.log(para2.setAttribute("class", "para3")); // it will change the class variable name of the givven attribute.
+
+    </script>
+</body>
+</html>

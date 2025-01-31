@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Styling</title>
+    <style>
+        .container { 
+            background-color: darksalmon;
+            height: 10rem;
+            width: 10rem;
+            display: none; /* conatiner is not visible  */
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        This is a Tutorial for Styling.
+    </h1>
+    <div class="container">This is a Container.</div>
+    <script>
+
+        let div = document.querySelector("div");  //Assign a Div to this Variable.
+
+        div.style.backgroundColor = "RED"; //Change the color of the div.
+        div.style.fontSize = "2rem"; //Change the font-size.
+        div.style.display = "flex"; //Now, Conatiner is visible.
+        div.innerText = "Hello!!"; //Change the TEXT!
+        div.style.color = "White"; //Change the TEXT Color!
+    </script>
+</body>
+</html>

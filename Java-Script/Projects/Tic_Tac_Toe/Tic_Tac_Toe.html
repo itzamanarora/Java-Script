@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="Style.css">
+  </head>
+  <body>
+    <!-- Body  -->
+    <center>
+      <h1>Tic Tac Toe Game!</h1>
+
+      <div class="text">
+        Player Chance:
+        <span id="Player_Chance"></span>
+        <p>
+          Score: X = <span id="XScore"></span>, O = <span id="OScore"></span>
+        </p>
+      </div>
+
+      <div class="container">
+        <button id="btn_1" class="box"></button>
+        <button id="btn_2" class="box"></button>
+        <button id="btn_3" class="box"></button>
+        <button id="btn_4" class="box"></button>
+        <button id="btn_5" class="box"></button>
+        <button id="btn_6" class="box"></button>
+        <button id="btn_7" class="box"></button>
+        <button id="btn_8" class="box"></button>
+        <button id="btn_9" class="box"></button>
+      </div>
+      <div class="winner_text"></div>
+      <button id="new_game" class="btns">New Game</button>
+      <button id="reset_game" class="btns">Reset Game</button>
+      <h3>Winning Prediction</h3>
+      <label>X</label>
+      <progress id="X_prob" min="0" max="100"></progress>
+      <label>O</label>
+      <progress id="O_prob" min="0" max="100"></progress>
+    </center>
+    <script src="Script.js"></script>
+  </body>
+</html>

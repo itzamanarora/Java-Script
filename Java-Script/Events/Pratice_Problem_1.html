@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratice Problem 1</title>
+    <style>
+        #mode {
+            width: 10rem;
+            height: 2rem;
+            font-size: 1.2rem;
+        }
+
+        .light_Mode {
+            background-color: whitesmoke;
+            color: black;
+        }
+
+        .dark_Mode {
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <center>
+            Pratice Problem 1
+        </center>
+    </h1>
+    <p>
+        <strong>
+            Qs.
+        </strong>
+        Create a toggle button that changes the screen to dark-mode when clicked & light-mode when clicked again.
+    </p>
+    <button id="mode">Dark Mode</button>
+    <script>
+        //Selects the button element with the id="mode".
+        let Mode_Button = document.querySelector('#mode');
+
+        //Selects the <body> element.
+        let body = document.querySelector('body');
+
+        //Adds a click event listener to the button, which runs a function each time the button is clicked. 
+        Mode_Button.addEventListener('click', () => {
+        
+            // Adds the dark_Mode class to <body> if it’s not present.
+            // Removes it if it’s already present.
+            body.classList.toggle('dark_Mode');
+            // Toggles the light_Mode class similarly.
+            body.classList.toggle('light_Mode');
+
+            //Check the Current Mode
+           if(body.classList.contains('dark_Mode')) { //Checks if the dark_Mode class is present on <body>
+                // If dark_Mode is active, the button text changes to "Light Mode."
+                // Otherwise, it changes back to "Dark Mode."
+                Mode_Button.textContent = 'Light Mode';
+
+           } else {
+                Mode_Button.textContent = 'Dark Mode';
+           }
+        })
+    </script>
+</body>
+</html>

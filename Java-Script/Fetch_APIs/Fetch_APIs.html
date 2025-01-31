@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch APIs</title>
+  </head>
+  <body>
+    <h1>
+      <center>Fetch APIs</center>
+    </h1>
+    <p>
+      The fetch APIs provides an interface for fetching(sending/receiving)
+      resources.
+    </p>
+    <p>It uses Request and Response object.</p>
+    <p>The fetch() method is used to fetch a resources(data).</p>
+    <p>
+      let promise = fetch(url, [options])
+      <!-- Jab bhi hum option mein kuch nhi pass krte to vo GET Api consider krta hai-->
+    </p>
+    <h1>
+      <strong> Understanding Terms </strong>
+    </h1>
+    <p>
+      <strong> AJAX: </strong>
+      is Asynchornous JS & XML(old format)
+    </p>
+    <p>
+        <strong> JSON: </strong>
+        is JavaScript Oject Notation(Current Format)
+    </p>
+    <p>
+        <strong>json() method:</strong>
+        returns a second promise that resolves with the result of parsing the response body text 
+    </p>
+    <h1> 
+        <strong>API Response:</strong>
+    </h1>
+    <button onclick="getFacts()">Generate Facts!</button>
+    <div id="facts-container"></div> <!-- Container for displaying facts -->
+    <script src="Fetch_APIs.js"></script>
+  </body>
+</html>

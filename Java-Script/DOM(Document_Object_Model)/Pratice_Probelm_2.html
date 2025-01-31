@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratice Problem 2</title>
+    <style>
+        .class_old {
+            color: brown;
+        }
+
+        .newclass {
+            width: 15rem;
+            height: 15rem;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <center>
+            Pratice Problem
+        </center>
+    </h1>
+    <p><strong>Qs.</strong>Create a 'p' tag in html, give it a class and some styling.</p>
+    <p>
+        Now create a new class in CSS and try to append this class to the p element.</p>
+    </p>
+    <p>Did you notice, how you overwrite the class name when you add a new one?</p>
+    <p>Solve this problem using a class list.</p>
+
+    <div class="class_old">Helloo!</div>
+    <script>
+
+        // classList is a collection of class attribute of the Element.
+        // classlist mein humara passs sare element ki list ajati hai
+
+
+        let div = document.querySelector("div");
+        div.getAttribute("class"); // to get the class value.
+        console.log(div);
+        // div.setAttribute("class", "newclass"); //set the new class 
+        div.classList.add("newclass");
+    </script>
+</body>
+</html>

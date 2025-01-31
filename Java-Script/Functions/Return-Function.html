@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+</head>
+
+<body>
+    <H1>This is a Tutorial for function with return type.</H1>
+    <p>Please Enter the 1st Value: </p>
+    <input type="text" placeholder="1st Number" id="number1">
+    <p>Please Enter the 2nd Value: </p>
+    <input type="text" placeholder="2nd Number" id="number2">
+    <button onclick="result()">Click Me!</button>
+
+    <script>
+        function result(l, b) {
+
+            let length = parseFloat(document.getElementById("number1").value)
+            let breadth = parseFloat(document.getElementById("number1").value)
+
+            if (isNaN(length) || isNaN(breadth)) {
+                document.getElementById("Result").innerHTML = "Please Enter Valid Numbers."
+            }
+
+            else {
+                let res = length * breadth;
+                document.getElementById("Result").innerHTML = res;
+            }
+
+            return null;
+        }
+    </script>
+
+    <p>Result: <span id="Result"></span></p>
+</body>
+
+</html>
